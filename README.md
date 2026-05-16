@@ -8,7 +8,7 @@ CyberFeed is a full-stack web application that aggregates cybersecurity news and
 
 This application is designed for use on contemporary desktop browsers. It has been tested and works on:
 
-- **Google Chrome** 
+- **Google Chrome** (prefered)
 - **Mozilla Firefox** 
 - **Microsoft Edge** 
 - **Safari** 
@@ -33,10 +33,10 @@ This document is written for future developers who will be taking over or contri
 
 Before getting started, make sure you have the following installed:
 
-- **Node.js** (v18 or higher) - [Download here](https://nodejs.org/)
+- **Node.js** (v18 or higher) 
 - **npm** (comes with Node.js)
-- A **Supabase** account - [Sign up here](https://supabase.com/)
-- A **GNews API** key - [Get one here](https://gnews.io/)
+- A **Supabase** account 
+- A **GNews API** key 
 
 ### Setup Steps
 
