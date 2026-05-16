@@ -44,7 +44,7 @@ function renderArticles(articles, container) {
         <span class="card-date">${publishedDate}</span>
         <div class="card-actions">
           <a href="${article.url}" target="_blank">Read More &rarr;</a>
-          <button class="btn btn-save" onclick='saveArticle(${JSON.stringify(article)})'>+ Save</button>
+          <button class="btn btn-save" onclick='saveArticle(${JSON.stringify(article).replace(/\n/g, ' ').replace(/\r/g, ' ')})'>+ Save</button>
         </div>
       </div>
     `;
