@@ -24,7 +24,7 @@ function renderArticles(articles, container) {
   const grid = document.createElement('div');
   grid.className = 'articles-grid';
 
-  articles.forEach(function(article) {
+  articles.forEach(function(article, i) {
     const card = document.createElement('div');
     card.className = 'article-card';
 
@@ -44,10 +44,16 @@ function renderArticles(articles, container) {
         <span class="card-date">${publishedDate}</span>
         <div class="card-actions">
           <a href="${article.url}" target="_blank">Read More &rarr;</a>
-          <button class="btn btn-save" onclick='saveArticle(${JSON.stringify(article).replace(/\n/g, ' ').replace(/\r/g, ' ')})'>+ Save</button>
+          <button class="btn btn-save">+ Save</button>
         </div>
       </div>
     `;
+
+    // had to do it this way because some titles have weird characters that break onclick
+    const saveBtn = card.querySelector('.btn-save');
+    saveBtn.addEventListener('click', function() {
+      saveArticle(article);
+    });
 
     grid.appendChild(card);
   });
